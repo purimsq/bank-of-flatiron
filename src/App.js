@@ -1,7 +1,16 @@
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import TransactionList from './TransactionList';
+import TransactionForm from './TransactionForm';
 
 function App() {
+  const [transactions, setTransactions] = useState([]);
+
+  const handleAddTransaction = (newTransaction) => {
+    setTransactions([...transactions, newTransaction]);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +27,11 @@ function App() {
           Learn React
         </a>
       </header>
+      <div className="App-content">
+        <h1 className='Royal'>The Royal Bank of Flatiron</h1>
+        <TransactionForm onAddTransaction={handleAddTransaction} />
+        <TransactionList transactions={transactions} />
+      </div>
     </div>
   );
 }
