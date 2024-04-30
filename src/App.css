@@ -1,9 +1,11 @@
+/* General Styles */
 .App {
   text-align: center;
 }
 
 .App-logo {
-  height: 40vmin; pointer-events: none;
+  height: 40vmin;
+  pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -36,7 +38,54 @@
   }
 }
 
- .Royal {
+/* Custom Styles for Royal Bank */
+.Royal {
   background-color: blue;
- }
- 
+  padding: 10px;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Styles for TransactionForm */
+.transaction-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  flex: 0 0 48%;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input,
+.date-picker-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
